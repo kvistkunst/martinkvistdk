@@ -32,7 +32,12 @@ handlers:
 #- url: /sitemap.xml
 #  static_files: sitemap.xml
 #  upload: sitemap\.xml
+#inbound_services:
+#- mail_bounce
 
+#- url: /_ah/bounce
+#  script: handle_bounced_email.php
+#  login: admin
 
 
 # Handle folder urls by serving the index.html page inside.

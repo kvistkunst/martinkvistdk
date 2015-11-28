@@ -9,7 +9,7 @@ if($_POST) {
 
     // Enter the email where you want to receive the message
     $emailTo = 'kvistkunst@gmail.com';
-
+    $siteMailer = 'mailer@martinkvistdk.appspotmail.com';
 
     $clientName = addslashes(trim($_POST['name']));
     $clientEmail = addslashes(trim($_POST['email']));
@@ -32,11 +32,10 @@ if($_POST) {
     }
     if($clientName != '' && isEmail($clientEmail) && $message != '') {
 
-        // Send email
-	//$headers = "From: " . $clientName . " <" . $clientEmail . ">" . "\r\n" . "Reply-To: " . $clientEmail;
-  $wsmessage = $clientName. "\n\n". $clientEmail . "\n\n". $message;
-// Revelation after hours of debugging the mail() wont take more than 3 args..
-	mail($emailTo, $subject, $wsmessage);
+        // Send email < sitemailer > to circumwent server security with other senders... 
+	$headers = "From: ".$clientName." <" . $siteMailer. ">" . "\r\n" . "Reply-To: " . $clientEmail;
+
+	mail($emailTo, $subject, $message, $headers);
     }
 
 echo json_encode($array);
