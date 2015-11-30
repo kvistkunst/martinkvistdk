@@ -32,7 +32,7 @@ if($_POST) {
     }
     if($clientName != '' && isEmail($clientEmail) && $message != '') {
 
-        // Send email < sitemailer > to circumwent server security with other senders... 
+        // Send email < sitemailer > to circumwent server security with other senders...
 	$headers = "From: ".$clientName." <" . $siteMailer. ">" . "\r\n" . "Reply-To: " . $clientEmail;
 
 	mail($emailTo, $subject, $message, $headers);

@@ -13,7 +13,7 @@
             if(isset($pageTitle)){
               print $pageTitle;
             } else {
-              print 'Flying High Acrobatics';
+              print 'Martin Kvist';
             }
            ?>
 

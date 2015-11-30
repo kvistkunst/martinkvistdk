@@ -53,7 +53,7 @@
             </div>
             <div class="col-sm-5 footer-social wow fadeIn">
                 <a href="https://www.facebook.com/kvistkunst"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-dribbble"></i></a>
+                <a href="https://dk.linkedin.com/in/martin-kvist-8305703"><i class="fa fa-linkedin"></i></a>
                 <a href="#"><i class="fa fa-twitter"></i></a>
                 <a href="#"><i class="fa fa-pinterest"></i></a>
             </div>
